@@ -53,4 +53,9 @@ function multiplesOfN(n) {
   return multiples;
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN,  };
+function addPunctuation(str) {
+  return function addExcitment(string) {
+    return string + str;
+  };
+}
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation };

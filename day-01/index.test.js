@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN,  } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -57,6 +57,14 @@ describe('primitive code challenges', () => {
       expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
       expect(multiplesOfN(25)).toEqual([25, 50]);
       expect(multiplesOfN(75)).toEqual([]);
+    });
+  });
+
+  describe('HOFO', () => {
+    describe('addPunctuation', () => {
+      it('adds punctuation', () => {
+        expect(addPunctuation('!!!')('hello world')).toEqual('hello world!!!');
+      });
     });
   });
 });
