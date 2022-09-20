@@ -67,4 +67,15 @@ function addFirstElement(str) {
   };
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement,  };
+function rootDigit(num) {
+  const firstNum = num
+    .toString()
+    .split('')
+    .map(number => parseInt(number))
+    .reduce((acc, curr) => {
+      return acc + curr;
+    }, 0);
+  return firstNum < 10 ? firstNum : rootDigit(firstNum);
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement, rootDigit };
