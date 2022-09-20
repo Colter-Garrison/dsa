@@ -78,4 +78,8 @@ function rootDigit(num) {
   return firstNum < 10 ? firstNum : rootDigit(firstNum);
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement, rootDigit };
+function repeat(txt, num) {
+  return num === 1 ? txt : txt + repeat(txt, num - 1);
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement, rootDigit, repeat };

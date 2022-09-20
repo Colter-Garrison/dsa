@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement, rootDigit } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement, rootDigit, repeat } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -79,6 +79,14 @@ describe('primitive code challenges', () => {
       expect(rootDigit(123)).toEqual(6);
       expect(rootDigit(4322)).toEqual(2);
       expect(rootDigit(999888777)).toEqual(9);
+    });
+  });
+
+  describe('repeatString', () => {
+    it('repeats a string', () => {
+      expect(repeat('ab', 3)).toEqual('ababab');
+      expect(repeat('kiwi', 1)).toEqual('kiwi');
+      expect(repeat('cherry', 2)).toEqual('cherrycherry');
     });
   });
 });
