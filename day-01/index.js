@@ -58,4 +58,13 @@ function addPunctuation(str) {
     return string + str;
   };
 }
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation };
+
+function addFirstElement(str) {
+  const newArr = [];
+  return function addToArr (arr) {
+    newArr.push(str, ...arr);
+    return newArr;
+  };
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirstElement,  };
