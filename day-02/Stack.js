@@ -21,7 +21,14 @@ class Stack {
     return this.#list;
   }
 
-
+  checkSyntax(item) {
+    const arr = [];
+    String(item).split('').map(char => {
+      if (char === '(' || char === ')' || char === '{' || char === '}') {
+        arr.push(char);
+      }
+    });
+  }
 }
 
 module.exports = { Stack };

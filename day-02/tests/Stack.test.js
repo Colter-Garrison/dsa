@@ -19,4 +19,9 @@ describe('Stack', () => {
     const peekedItem = new Stack(['fox', 'goose', 'lizard']);
     expect(peekedItem.classPeek()).toEqual('lizard');
   });
+
+  it('check-syntax should check to see if curly braces or parenthesis are matching', () => {
+    const stack = new Stack();
+    stack.checkSyntax('((2 + 3) * (4 + 11 * (2 - 1)))');
+  });
 });
