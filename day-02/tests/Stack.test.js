@@ -1,7 +1,7 @@
 const { Stack } = require('../Stack.js');
 
 describe('Stack', () => {
-  it('push should add an item to the top on an array', () => {
+  it('push should add an item to the top of an array', () => {
     const newItemArr = new Stack([]);
     newItemArr.classPush('fox');
     newItemArr.classPush('goose');
