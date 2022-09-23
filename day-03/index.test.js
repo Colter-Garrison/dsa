@@ -21,7 +21,7 @@ describe('node based data structures', () => {
     expect(B.right.right.value).toEqual('D');
   });
 
-  it.only('creates a person tree', () => {
+  it('creates a person tree', () => {
     const Austin = new PersonTreeNode({
       name: 'Austin',
       city: 'Portland',
@@ -57,5 +57,17 @@ describe('node based data structures', () => {
     expect(Austin.right.right.value).toEqual('Mariah');
     expect(Austin.right.left).toEqual(null);
     expect(Austin.right.right.left.value).toEqual('Jenna');
+
+    expect(Austin.findPerson('Jenna')).toEqual({
+      name: 'Jenna',
+      city: 'Portland',
+      state: 'Oregon'
+    });
+    expect(Austin.findPerson('Aaron')).toEqual({
+      name: 'Aaron',
+      city: 'Austin',
+      state: 'Texas'
+    });
+    expect(Austin.findPerson('Bob')).toEqual(null);
   });
 });
